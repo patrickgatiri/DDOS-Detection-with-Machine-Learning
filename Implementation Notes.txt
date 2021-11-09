@@ -1,0 +1,17 @@
+The machine learning algorithms work in two phases:
+- The training phase.
+- The inference phase.
+
+Setup a local repository.
+Link the repo to a remote Github repository.
+Activate the virtual environment for both the Django project and Jupyter Notebook.
+	source bin/activate
+	ipython kernel install --user --name=venv
+
+The next step is to build the machine learning algorithms.
+Install the necessary ML libraries:
+	- numpy
+	- pandas
+	- sklearn
+	- joblib
+Use Google Collaboratory Notebook to host the code.
