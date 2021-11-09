@@ -15,3 +15,6 @@ Install the necessary ML libraries:
 	- sklearn
 	- joblib
 Use Google Collaboratory Notebook to host the code.
+
+Create an Endpoints application that will be used for the HTTP REST API.
+Create models for the Endpoints application.
