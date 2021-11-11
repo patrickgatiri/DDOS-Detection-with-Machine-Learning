@@ -18,3 +18,8 @@ Use Google Collaboratory Notebook to host the code.
 
 Create an Endpoints application that will be used for the HTTP REST API.
 Create models for the Endpoints application.
+These models will map to database tables that will be stored by Django using SQLite.
+
+Create the REST API for our endpoints.
+
+We need to define serializers for our models. The serializers will handle the mapping of database objects to and from HTTP requests.
