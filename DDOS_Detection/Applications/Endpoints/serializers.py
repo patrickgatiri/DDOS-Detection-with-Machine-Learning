@@ -9,6 +9,8 @@ after first validating the incoming data.
 Our frontend - The REST API - will be handling data in the form of Javascript Object Notation (JSON).
 Our backend - SQLite - will be handling data in the form of Python objects, which are instances of our models.
 The serializers will handle the conversion of data to and from these different formats.
+
+We will use ModelSerializers to keep the code DRY.
 '''
 from rest_framework import serializers
 
