@@ -14,14 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 
 # Include the URL patterns for the "Endpoints" application.
 from Applications.Endpoints.urls import urlpatterns as EndpointsURLs
 
+# Include the URL pattern for the landing page.
+from Applications.Landing.urls import urlpatterns as LandingPageURLs
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+urlpatterns += LandingPageURLs
 urlpatterns += EndpointsURLs

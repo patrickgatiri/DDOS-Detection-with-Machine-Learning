@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Custom applications
     'Applications.Endpoints',
+    'Applications.Landing',
 ]
 
 MIDDLEWARE = [
