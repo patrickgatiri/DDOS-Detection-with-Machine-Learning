@@ -43,7 +43,7 @@ class MLAlgorithm(models.Model):
 
 class MLAlgorithmStatus(models.Model):
     '''
-    The MLAlgorithmStatus represent status of the MLAlgorithm which can change during the time.
+    The MLAlgorithmStatus represent status of the MLAlgorithms which can change with time.
     Each algorithm is served via its own API endpoint.
     We need to track the status of the algorithms in order to know which algorithm is in use during production.
 

@@ -6,6 +6,8 @@ Serializers also provide deserialization,
 allowing parsed data to be converted back into complex types,
 after first validating the incoming data.
 
+Serializers are the links between our views and our models.
+
 Our frontend - The REST API - will be handling data in the form of Javascript Object Notation (JSON).
 Our backend - SQLite - will be handling data in the form of Python objects, which are instances of our models.
 The serializers will handle the conversion of data to and from these different formats.
