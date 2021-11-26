@@ -3,7 +3,7 @@
 from django.conf.urls import include, url
 from rest_framework.routers import DefaultRouter
 
-from Applications.Endpoints.views import EndpointViewSet, MLAlgorithmStatusViewSet, MLAlgorithmViewSet, MLRequestViewSet
+from Applications.Endpoints.views import EndpointViewSet, MLAlgorithmStatusViewSet, MLAlgorithmViewSet, MLRequestViewSet, PredictView
 
 router = DefaultRouter(trailing_slash=False)
 
@@ -19,4 +19,7 @@ Our REST API will use the format "/api/<version>" for versioning purposes.
 '''
 urlpatterns = [
     url(r"^api/v1/", include(router.urls)),
+    url(
+        r"^api/v1/(?P<endpoint_name>.+)/predict$", PredictView.as_view(), name="predict"
+    ),
 ]
