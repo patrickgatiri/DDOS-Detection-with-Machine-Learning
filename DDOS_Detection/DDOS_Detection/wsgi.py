@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 from Applications.Machine_Learning.DDOS_Classifier.random_forest_classifier import RandomForestClassifier
+from Applications.Machine_Learning.DDOS_Classifier.extra_trees_classifier import ExtraTreesClassifier
+
 from Applications.Machine_Learning.registry import MLRegistry
 import inspect
 import os
@@ -36,7 +38,7 @@ try:
                            owner="Patrick Gatiri X Karanja Mbuthia",
                            algorithm_description="Random Forest with simple pre-processing and post-processing",
                            algorithm_code=inspect.getsource(RandomForestClassifier))
-    '''
+    
     # Extra Trees classifier
     et = ExtraTreesClassifier()
     # add to ML registry
@@ -45,10 +47,9 @@ try:
                             algorithm_name="extra trees",
                             algorithm_status="testing",
                             algorithm_version="0.0.1",
-                            owner="Mark Silla",
-                            algorithm_description="Extra Trees with simple pre- and post-processing",
+                            owner="Patrick Gatiri X Karanja Mbuthia",
+                            algorithm_description="Extra Trees with simple pre-processing and post-processing",
                             algorithm_code=inspect.getsource(ExtraTreesClassifier))
-    '''
 
 except Exception as e:
     print("Exception while loading the algorithms to the registry,", str(e))
