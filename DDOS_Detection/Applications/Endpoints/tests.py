@@ -84,6 +84,7 @@ class EndpointTests(TestCase):
 		"Idle_Min": 0.0
             
         }
+		
         classifier_url = "/api/v1/ddos_classifier/predict"
         response = client.post(classifier_url, input_data, format="json")
         self.assertEqual(response.status_code, 200)
