@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Custom applications
     'Applications.Endpoints',
     'Applications.Landing',
+    'Applications.Machine_Learning',
 ]
 
 MIDDLEWARE = [
