@@ -64,7 +64,7 @@ class MLTests(TestCase):
           		"ECE_Flag_Count": 0.0,
           		"Down_Up_Ratio": 0.0,
           		"Average_Packet_Size": 0.0,
-          		"Avg_Fwd_Segment_Size": 0.0,"Destination_Port": 80.0,
+          		"Avg_Fwd_Segment_Size": 0.0, "Destination_Port": 80.0,
             "Flow_Duration": 3.0,
           		"Total_Fwd_Packets": 2.0,
           		"Total_Backward_Packets": 1.0,
@@ -185,7 +185,6 @@ class MLTests(TestCase):
                                algorithm_description, algorithm_code)
         # there should be one endpoint available
         self.assertEqual(len(registry.endpoints), 1)
-
 
     def test_et_algorithm(self):
         input_data = {
