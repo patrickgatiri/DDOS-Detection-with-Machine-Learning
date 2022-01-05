@@ -23,6 +23,7 @@ from Applications.Endpoints.serializers import ABTestSerializer
 
 # To maintain the ACID properties of the database.
 from django.db import transaction
+from django.db.models import F
 
 from rest_framework.exceptions import APIException
 
