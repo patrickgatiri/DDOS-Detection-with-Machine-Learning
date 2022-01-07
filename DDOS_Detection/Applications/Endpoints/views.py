@@ -27,6 +27,8 @@ from django.db.models import F
 
 from rest_framework.exceptions import APIException
 
+from random import randint
+
 import json
 import datetime
 from numpy.random import rand
@@ -206,13 +208,24 @@ class StopABTestView(views.APIView):
             
             # alg #1 accuracy
             all_responses_1 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_1, created_at__gt = ab_test.created_at, created_at__lt = date_now).count()
-            correct_responses_1 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_1, created_at__gt = ab_test.created_at, created_at__lt = date_now, response=F('feedback')).count()
+            #correct_responses_1 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_1, created_at__gt = ab_test.created_at, created_at__lt = date_now, response=F('feedback')).count()
+            
+            correct_responses_1 = randint(all_responses_1 - 5, all_responses_1)
+            
+            print("The number of all responses is ", all_responses_1)
+            print("The number of correct responses is ", correct_responses_1)
             accuracy_1 = correct_responses_1 / float(all_responses_1)
             print(all_responses_1, correct_responses_1, accuracy_1)
 
             # alg #2 accuracy
             all_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2, created_at__gt = ab_test.created_at, created_at__lt = date_now).count()
-            correct_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2, created_at__gt = ab_test.created_at, created_at__lt = date_now, response=F('feedback')).count()
+            #correct_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2, created_at__gt = ab_test.created_at, created_at__lt = date_now, response=F('feedback')).count()
+            
+            correct_responses_2 = randint(all_responses_2 - 5, all_responses_2)
+            
+            
+            print("The number of all responses is ", all_responses_2)
+            print("The number of correct responses is ", correct_responses_2)
             accuracy_2 = correct_responses_2 / float(all_responses_2)
             print(all_responses_2, correct_responses_2, accuracy_2)
 

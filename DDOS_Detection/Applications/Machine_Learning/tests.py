@@ -188,8 +188,8 @@ class MLTests(TestCase):
 
     def test_et_algorithm(self):
         input_data = {
-            "Destination_Port": 80.0,
-            "Flow_Duration": 3.0,
+                "Destination_Port": 80.0,
+                "Flow_Duration": 3.0,
           		"Total_Fwd_Packets": 2.0,
           		"Total_Backward_Packets": 1.0,
           		"Total_Length_of_Fwd_Packets": 0.0,

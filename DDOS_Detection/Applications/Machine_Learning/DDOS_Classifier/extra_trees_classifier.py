@@ -19,9 +19,9 @@ class ExtraTreesClassifier:
         return self.model.predict_proba(input_data)
 
     def postprocessing(self, input_data):
-        label = "DDOS"
+        label = "BENIGN"
         if input_data[1] > 0.5:
-            label = "BENIGN"
+            label = "DDOS"
         return {"probability": input_data[1], "label": label, "status": "OK"}
 
     def compute_prediction(self, input_data):

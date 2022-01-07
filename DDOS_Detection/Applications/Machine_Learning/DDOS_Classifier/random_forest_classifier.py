@@ -19,16 +19,19 @@ class RandomForestClassifier:
         return self.model.predict_proba(input_data)
 
     def postprocessing(self, input_data):
-        label = "DDOS"
+        label = "BENIGN"
         if input_data[1] > 0.5:
-            label = "BENIGN"
+            label = "DDOS"
         return {"probability": input_data[1], "label": label, "status": "OK"}
 
     def compute_prediction(self, input_data):
         try:
             input_data = self.preprocessing(input_data)
+            print("Input data: ", input_data)
             prediction = self.predict(input_data)[0]  # only one sample
+            print("Prediction pre processing: ", prediction)
             prediction = self.postprocessing(prediction)
+            print("Prediction post processing: ", prediction)
         except Exception as e:
             return {"status": "Error", "message": str(e)}
 
