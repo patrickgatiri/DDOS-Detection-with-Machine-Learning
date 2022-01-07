@@ -8,7 +8,7 @@ class EndpointTests(TestCase):
         client = APIClient()
         input_data = {
 	    	"Destination_Port": 80.0, 
-		"Flow_Duration": 3.0, 
+		"Flow_Duration": 3.0,
 		"Total_Fwd_Packets": 2.0, 
 		"Total_Backward_Packets": 1.0, 
 		"Total_Length_of_Fwd_Packets": 0.0, 
@@ -21,7 +21,7 @@ class EndpointTests(TestCase):
 		"Bwd_Packet_Length_Min": 0.0, 
 		"Bwd_Packet_Length_Mean": 0.0, 
 		"Bwd_Packet_Length_Std": 0.0, 
-		"Flow_Bytes_Sec": 0.0, 
+		"Flow_Bytes_Sec": 0.0,
 		"Flow_Packets_Sec": 219948.0, 
 		"Flow_IAT_Mean": 3.0,
 		"Flow_IAT_Std": 0.0, 

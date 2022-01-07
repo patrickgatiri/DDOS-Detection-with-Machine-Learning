@@ -3,8 +3,8 @@ import json
 
 # Decide the two file paths according to your
 # computer system
-csvFilePath = r'C:/Users/user/Desktop/MOSAIC/test_mosaic.csv' 
-jsonFilePath = r'C:/Users/user/Desktop/MOSAIC/test_json.json'
+csvFilePath = r'/home/patrick/Github/DDOS Detection with Machine Learning/DDOS_Detection/CSV to JSON/first_ten.csv' 
+jsonFilePath = r'/home/patrick/Github/DDOS Detection with Machine Learning/DDOS_Detection/CSV to JSON/first_ten.json'
 
 # Function to convert a CSV to JSON
 # Takes the file paths as arguments

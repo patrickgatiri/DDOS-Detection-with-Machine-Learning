@@ -81,7 +81,7 @@ class MLTests(TestCase):
           		"Flow_Bytes_Sec": 0.0,
           		"Flow_Packets_Sec": 219948.0,
           		"Flow_IAT_Mean": 3.0,
-          		"Flow_IAT_Std": 0.0,
+          	  	"Flow_IAT_Std": 0.0,
           		"Flow_IAT_Max": 3.0,
           		"Flow_IAT_Min": 3.0,
           		"Fwd_IAT_Total": 0.0,
