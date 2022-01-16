@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+    nginx:
+        restart: always
+        image: nginx:1.12-alpine
+        ports:
+            - 8000:8000
+        volumes:
+            - ./Docker/Nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - static_volume:/app/DDOS_Detection/static
+    wsgiserver:
+        build:
+            context: .
+            dockerfile: ./Docker/Backend/Dockerfile
+        entrypoint: /app/Docker/Backend/wsgi-entrypoint.sh
+        volumes:
+            - static_volume:/app/DDOS_Detection/static
+        expose:
+            - 8000
+volumes:
+    static_volume: {}

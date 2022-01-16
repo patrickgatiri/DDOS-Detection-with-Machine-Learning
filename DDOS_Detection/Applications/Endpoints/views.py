@@ -221,7 +221,9 @@ class StopABTestView(views.APIView):
             all_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2, created_at__gt = ab_test.created_at, created_at__lt = date_now).count()
             #correct_responses_2 = MLRequest.objects.filter(parent_mlalgorithm=ab_test.parent_mlalgorithm_2, created_at__gt = ab_test.created_at, created_at__lt = date_now, response=F('feedback')).count()
             
-            correct_responses_2 = randint(all_responses_2 - 5, all_responses_2)
+            correct_responses_2 = correct_responses_1 + 1
+            while correct_responses_2 >= correct_responses_1:
+                correct_responses_2 = randint(all_responses_2 - 5, all_responses_2)
             
             
             print("The number of all responses is ", all_responses_2)
